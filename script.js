@@ -35,7 +35,7 @@ function showAll(productsArray) {
 function mapAllItems() {
     const newPrices = menuOptions.map((product) => ({
         ...product, //Spread Operator
-        price: product.price * 0.9, //10% de desconto
+        price: product.price * 0.9 //10% de desconto
     }))
 
     showAll(newPrices)
@@ -56,8 +56,13 @@ function filterAllItems() {
     showAll(filterJustVegan)
 }
 
+function alerta(){
+    alert("Desconto dado nos Produtos de 10%")
+}
+
 
 buttonShowAll.addEventListener('click', () => showAll(menuOptions))
 buttonMapAll.addEventListener('click', mapAllItems)
 sumAll.addEventListener('click', sumAllItems)
 filterAll.addEventListener('click', filterAllItems)
+buttonMapAll.addEventListener('click', alerta)
