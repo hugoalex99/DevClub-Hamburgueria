@@ -6,17 +6,48 @@
 }
 
 body{
-    background-color: #ffffff;
+    background-color: rgb(255, 188, 13);
 }
+
+header{
+    height: 50px;
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+
+}
+.logo{
+    display: flex;
+    align-items: center;
+}
+
+.menu{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+    a{
+        color: rgb(255, 188, 13);
+        cursor: pointer;
+        font-weight: 900;
+    }
+}
+a:hover{
+    color: #000000;
+}
+
 .container-buttons{
     margin: 30px 0; 
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 20px;
+    width: 25%;
 }
 button{
-    background-color: rgb(255, 188, 13);
+    background-color: #FFFFFF;
     border: none;
     border-radius: 5px;
     color: #000000;
@@ -30,6 +61,9 @@ button:hover{
     opacity: 0.8;
 
 }
+.tela{
+    display: flex;
+}
 
 ul{
     list-style: none;
@@ -38,6 +72,7 @@ ul{
     gap: 20px;
     justify-content: center;
     align-items: center;
+    margin-top: 20px;
 }
 
 img{
@@ -46,16 +81,22 @@ img{
 }
 
 p{
-    color: #000000;
+    color: rgb(255, 188, 13);
+    background-color: #ffffff;
+    text-align: center;
+    font-weight: bold;
 }
 
 li{
-    border: 2px solid rgb(255, 188, 13);
+    border: 3px solid #FFFff9;
     border-radius: 5px;
     padding: 5px;
 }
 
 .item-price{
-    font-weight: bold;
-    color: #000000;
+    font-weight: 900;
+    color: #00000095;
+}
+.item-price:hover{
+    color: rgb(255, 188, 13);
 }
