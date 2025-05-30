@@ -24,6 +24,7 @@ function showAll(productsArray) {
                 <img src=${product.src}>
                 <p>${product.name}</p>
                 <p class="item-price">${formatCurrency(product.price)}</p>
+                <p class="desconto-price">Desconto: ${formatCurrency(product.discount)}</p>
             </li>
     
     `
@@ -35,7 +36,8 @@ function showAll(productsArray) {
 function mapAllItems() {
     const newPrices = menuOptions.map((product) => ({
         ...product, //Spread Operator
-        price: product.price * 0.9 //10% de desconto
+        price: product.price * 0.9, //10% de desconto
+        discount: product.price - (product.price * 0.9),
     }))
 
     showAll(newPrices)
@@ -46,7 +48,7 @@ function sumAllItems() {
 
    list.innerHTML = `
         <li>
-            <p>O valor total dos itens é R$ ${formatCurrency(totalValue)}</p>
+            <p class="total-price">O valor total dos itens é R$ ${formatCurrency(totalValue)}</p>
         </li>
     
     `
@@ -56,13 +58,9 @@ function filterAllItems() {
     showAll(filterJustVegan)
 }
 
-function alerta(){
-    alert("Desconto dado nos Produtos de 10%")
-}
 
 
 buttonShowAll.addEventListener('click', () => showAll(menuOptions))
 buttonMapAll.addEventListener('click', mapAllItems)
 sumAll.addEventListener('click', sumAllItems)
 filterAll.addEventListener('click', filterAllItems)
-buttonMapAll.addEventListener('click', alerta)
