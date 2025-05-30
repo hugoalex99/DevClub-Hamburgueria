@@ -28,13 +28,13 @@ header{
     gap: 30px;
 
     a{
-        color: rgb(255, 188, 13);
+        color: #502314;
         cursor: pointer;
         font-weight: 900;
     }
 }
 a:hover{
-    color: #000000;
+    color: rgb(255, 188, 13);
 }
 
 .container-buttons{
@@ -81,8 +81,8 @@ img{
 }
 
 p{
-    color: rgb(255, 188, 13);
-    background-color: #ffffff;
+    color: #F7D199;
+    background-color: #502314;
     text-align: center;
     font-weight: bold;
 }
@@ -91,12 +91,24 @@ li{
     border: 3px solid #FFFff9;
     border-radius: 5px;
     padding: 5px;
+    transition: all 0.5s ease;
+}
+li:hover{
+    background-color: #F7D199;
+    transform: translateY(-10px) scale(1.03);
 }
 
 .item-price{
     font-weight: 900;
-    color: #00000095;
+    color: #FFFFFF;
 }
 .item-price:hover{
-    color: rgb(255, 188, 13);
+    color: #F7D199;
+}
+.desconto-price{
+    color: chartreuse;
+}
+.total-price{
+    background-color: #F7D199;
+    color: #502314;
 }
